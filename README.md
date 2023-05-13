@@ -27,5 +27,23 @@ The goal for this project is to provide a solution that will be particularly hel
 
 ●	The scalability and sustainability of the app to make it more accessible and adaptable
 
-
-![image](https://github.com/Taru-Shukla/ToastBusters/assets/90433380/f99c0843-2627-4542-b034-17ea7d913b37)
+## Steps to run the application
+`1. Clone the repository`<br/>
+ `2. Set your module path to include JavaFx libraries`<br/>
+  `3. Add all the external jars for the necessary functionalities`<br/>
+ `4. Set the VM arguments for the Main java file`<br/>
+  `5. Run the sql db script committed to the repo before running the Main application`<br/>
+ `6. Once the script is done runnning launch the application by running Main.java file`<br/>
+  
+  
+ ## Problem Statement
+ 1. Struggling with meal ideas with available ingredients
+ 2. Tedious to search for recipes from multiple sources
+ 3. Buying groceries for desired dishes can be inconvenient and time consuming
+ 4. Wasted time, effort, and food, as ingredients often go unused or expire before consumption
+ 5. Face Issue to find the exact recipe video and instructions
+ 
+ ## Solution
+ 1. "Personalized Pantry": A comprehensive solution that helps users make the most of their pantry ingredients to save time, money, and reduce food waste.
+ 2. "What's in Your Kitchen?" : A recipe suggestion tool designed to help users discover delicious recipes based on the ingredients they already have at home. 
+ 3. "Recipe Favorites” : a user-friendly application designed to help users discover, save, and organize their favorite recipes from a wide variety of sources. 
