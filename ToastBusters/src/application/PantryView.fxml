@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pantryViewAnchorPane" prefHeight="710.0" prefWidth="1215.0" style="-fx-background-color: #15313a;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Scene2Controller">
+   <children>
+      <ImageView fitHeight="478.0" fitWidth="1215.0" layoutY="180.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/pantrybg.jpeg" />
+         </image>
+      </ImageView>
+      <HBox prefHeight="53.0" prefWidth="1215.0" style="-fx-background-color: #15313a;">
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#switchToScene1" onMouseClicked="#switchToScene1" prefHeight="49.0" prefWidth="119.0" stylesheets="@style.css" text="Back" textFill="#c0a28f" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Comic Sans MS" size="18.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="84.0" prefWidth="918.0" text="Let's add ingridents to the pantry ..." textAlignment="JUSTIFY" textFill="#c0a28f" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="26.0" />
+               </font>
+            </Label>
+         </children></HBox>
+      <HBox layoutY="657.0" prefHeight="53.0" prefWidth="1215.0" style="-fx-background-color: #15313a;" />
+      <TableView fx:id="tvGrocery" layoutX="256.0" layoutY="207.0" onMouseClicked="#rowClicked" prefHeight="416.0" prefWidth="798.0" style="-fx-background-color: #89949c;" styleClass="column-header-background" stylesheets="@style.css">
+        <columns>
+          <TableColumn fx:id="colid" editable="false" prefWidth="65.0" text="ID" />
+          <TableColumn fx:id="colGrocery" editable="false" prefWidth="276.0715026855469" text="Ingredient" />
+            <TableColumn fx:id="colQuantity" editable="false" prefWidth="224.928466796875" text="Quantity" />
+            <TableColumn fx:id="colUseBy" editable="false" prefWidth="231.56549072265625" text="Expires" />
+        </columns>
+      </TableView>
+      <Label fx:id="quantityLabel" layoutX="468.0" layoutY="75.0" pickOnBounds="false" prefHeight="17.0" prefWidth="99.0" text="Quantity :" textFill="#c0a28f">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="tfUseBy" layoutX="813.0" layoutY="73.0" prefHeight="26.0" prefWidth="108.0" />
+      <Label fx:id="ingredientLabel" layoutX="22.0" layoutY="74.0" prefHeight="25.0" prefWidth="119.0" text="Ingredients :" textFill="#c0a28f">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="138.0" fitWidth="255.0" layoutX="955.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/giphy.gif" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfGrocery" layoutX="174.0" layoutY="73.0" prefHeight="26.0" prefWidth="245.0" />
+      <Label fx:id="useByLabel" layoutX="725.0" layoutY="75.0" prefHeight="25.0" prefWidth="80.0" text="Expires :" textFill="#c0a28f">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfQuantity" layoutX="566.0" layoutY="73.0" prefHeight="26.0" prefWidth="115.0" />
+      <Button fx:id="btnUpdate" alignment="CENTER" layoutX="578.0" layoutY="129.0" onAction="#handleUpdate" style="-fx-background-color: #8c9ca0;" text="Update Ingridents" textFill="#251114">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnInsert" alignment="CENTER" layoutX="411.0" layoutY="129.0" onAction="#handleInsert" style="-fx-background-color: #8c9ca0;" text="Add Ingridents" textFill="#251114">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" alignment="CENTER" layoutX="770.0" layoutY="129.0" onAction="#handleDelete" onMousePressed="#handleDelete" style="-fx-background-color: #944c34;" text="Delete Ingridents" textFill="#251114">
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
